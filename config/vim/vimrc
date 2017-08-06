@@ -6,7 +6,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 " --- Plugs! ---
-Plug 'ahdinosaur/vim-colemak'
+Plug 'agentlewis/vim-dvorak'
 Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-sensible'
 Plug 'mhinz/vim-grepper'
