@@ -3,21 +3,21 @@ const test = require('ava')
 const Link = require('./link')
 
 test.cb('simple example', t => {
-  const source = '/home/dinosaur/.config/dinos/vim/.vimrc'
+  const source = '/home/agentlewis/.config/dinos/vim/.vimrc'
   const target = '.vimrc'
   const mode = 0o644
-  const user = 'dinosaur'
+  const user = 'agentlewis'
   const userId = 1000
-  const group = 'dinosaur'
+  const group = 'agentlewis'
   const groupId = 1000
   const env = {
-    HOME: '/home/dinosaur'
+    HOME: '/home/agentlewis'
   }
 
   const etcpasswd = `root:x:0:0:root:/root:/bin/bash
-dinosaur:x:1000:1000:dinosaur:/home/dinosaur:/bin/zsh`
+agentlewis:x:1000:1000:agentlewis:/home/agentlewis:/bin/zsh`
   const etcgroup = `root:x:0:
-dinosaur:x:1000:`
+agentlewis:x:1000:`
 
   const fs = {
     readFile: (path, encoding, cb) => {
@@ -28,8 +28,8 @@ dinosaur:x:1000:`
       t.pass()
     },
     symlink: (_target, path, cb) => {
-      t.is(_target, '/home/dinosaur/.config/dinos/vim/.vimrc')
-      t.is(path, '/home/dinosaur/.vimrc')
+      t.is(_target, '/home/agentlewis/.config/dinos/vim/.vimrc')
+      t.is(path, '/home/agentlewis/.vimrc')
       cb()
     },
     chmod: (path, _mode, cb) => {
