@@ -61,7 +61,7 @@ module.exports = [
     type: 'exec',
     commands: [
       //'groupadd docker',
-      'usermod -aG docker dinosaur',
+      'usermod -aG docker agentlewis',
       'systemctl enable docker'
     ],
     sudo: true
