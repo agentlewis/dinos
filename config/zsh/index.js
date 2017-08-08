@@ -8,6 +8,11 @@ module.exports = [
   },
   {
     type: 'link',
+    source: join(__dirname, 'z.sh'),
+    target: 'z.sh'
+  },
+  {
+    type: 'link',
     source: join(__dirname, 'zshrc'),
     target: '.zshrc'
   },
